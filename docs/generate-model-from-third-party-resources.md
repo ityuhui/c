@@ -42,14 +42,14 @@ Run the following commands and it will download and generate the java models for
 a docker daemon service is required on the host.
 
 ```bash
-mkdir -p /tmp/java && cd /tmp/java
+mkdir -p /tmp/c && cd /tmp/c
 docker run \
   --rm \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v "$(pwd)":"$(pwd)" \
   -ti \
   --network host \
-  docker.pkg.github.com/kubernetes-client/java/crd-model-gen:v1.0.2 \
+  docker.pkg.github.com/kubernetes-client/c/crd-model-gen:v1.0.0 \
   /generate.sh \
   -u https://gist.githubusercontent.com/yue9944882/266fee8e95c2f15a93778263633e72ed/raw/be12c13379eeed13d2532cb65da61fffb19ee3e7/crontab-crd.yaml \
   -n com.example.stable \
