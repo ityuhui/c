@@ -97,6 +97,12 @@ CustomObjectsAPI_listClusterCustomObject(apiClient_t *apiClient, char *group, ch
 // list or watch namespace scoped custom objects
 //
 object_t*
+CustomObjectsAPI_listCustomObjectForAllNamespaces(apiClient_t *apiClient, char *group, char *version, char *plural, char *pretty, int *allowWatchBookmarks, char *_continue, char *fieldSelector, char *labelSelector, int *limit, char *resourceVersion, char *resourceVersionMatch, int *timeoutSeconds, int *watch);
+
+
+// list or watch namespace scoped custom objects
+//
+object_t*
 CustomObjectsAPI_listNamespacedCustomObject(apiClient_t *apiClient, char *group, char *version, char *_namespace, char *plural, char *pretty, int *allowWatchBookmarks, char *_continue, char *fieldSelector, char *labelSelector, int *limit, char *resourceVersion, char *resourceVersionMatch, int *timeoutSeconds, int *watch);
 
 
